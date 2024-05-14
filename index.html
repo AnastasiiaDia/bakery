@@ -41,7 +41,7 @@
           </li>
         </ul>
       </nav>
-      <button type="button" class="button">Замовити дзвінок</button></div></div>
+      <button type="button" class="button modal-btn-open">Замовити дзвінок</button></div></div>
     </header>
     <main>
       <section class="hero-section section">
@@ -73,40 +73,40 @@
         /></div></div>
       </section>
       <section class="section" id="chefs-section">
-       <div class="container"><h2 class="chefs-title section-title centered">
-          Наші найкращі <span class="accent">шеф-кухарі</span>
+       <div class="container"><h2 class="chefs-title section-title centered">Наші найкращі <br><span class="accent">шеф-кухарі</span>
         </h2>
-        <ul>
-          <li>
-            <article><img class="chef-image" src="./images/nastya-chef.jpg" alt="Nastya chef">
+        <ul class="chefs-list">
+          <li class="chefs-item"><article>
+              <img class="chef-image" src="./images/nastya-chef.jpg" alt="Nastya chef">
               <h3 class="chef-title">Настя</h3>
               <p>Привіт, я Настя!</p>
               <p>Вже 10 років, я втілюю у життя цікаві та смачні ідеї.</p>
               <p>Я випічу для вас найсмачніщі вироби!</p>
             </article>
           </li>
-          <li>
-            <article><img class="chef-image" src="./images/vlad-chef.jpg" alt="Vlad chef">
+          <li class="chefs-item">
             <article>
+              <img class="chef-image" src="./images/vlad-chef.jpg" alt="Vlad chef">           
               <h3 class="chef-title">Влад</h3>
               <p>Привіт, я Влад!</p>
-              <p>
-                Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша любов,
+              <p>Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша любов,
                 з якою ми ділимось кожен раз з Вами через нашу випічку!
               </p>
               <p>Я зроблю для вас унікальну начинку на будь який смак</p>
             </article>
           </li>
-        </ul></div>
+        </ul>
+       </div>
       </section>
       <section class="section" id="formats-section">
-        <div class="container"><h2 class="formats-title section-title centered">Формати</h2>
-         <button class="carousel-button" type="button">
-          <svg width="16" height="16" class="" width="" height="">
+        <div class="container">
+          <h2 class="formats-title section-title centered">Формати</h2>
+          <button class="carousel-button" type="button">
+           <svg width="16" height="16" class="">
             <use href="./images/icons.svg#icon-arrow"></use>
-          </svg>
-        </button>
-        <ul class="formats-list">
+           </svg>
+          </button>
+         <ul class="formats-list">
           <li class="formats-item">
             <article class="format-card">
               <h3 class="format-title" lang="en">Walrus</h3>
@@ -232,5 +232,11 @@
       >
       <p class="address-copyright">&copy; 2022 Дані захищені</p></div>
     </footer>
+    <div class="backdrop is-hidden">
+     <div class="modal">
+      <button class="modal-btn-close" type="button">Close</button>      
+     </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
