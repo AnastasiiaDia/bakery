@@ -34,10 +34,10 @@
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
   --color-secondary-dark: #a18268;
-
   --color-brand-normal: #819b57;
   --color-brand-dark: #465929;
   --color-brand-light: #cfcfbc;
+
 }
 
 /* BASE  */
@@ -116,8 +116,8 @@ img {
 .button {
   color: var(--color-primary-light);
   font-weight: 600;
-
-  background-color: var(--color-brand-lignt);
+  
+  background-color: var(--color-brand-normal);
   border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   width: 238px;
@@ -128,15 +128,20 @@ img {
 
 .button:hover {
   color: var(--color-brand-dark);
-  background-color: transparent;
+  background-color:  var(--color-primary-light);;
 }
 
 /* Header */
 
 .header-container {
+  position: absolute;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
+ 
 }
 
 .header-nav {
@@ -155,7 +160,8 @@ img {
 
 .hero-section {
   padding: 272px 0;
-  background-image: url("../images/hero-section-background.jpg");
+  background-image:linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%),
+  url("../images/hero-section-background.jpg");
 
   background-repeat: no-repeat;
   background-position: center top;
@@ -354,6 +360,12 @@ img {
 }
 
 /* Footer */
+.footer-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  gap: 166px;
+}
 
 .address-link {
   color: var(--color-primary-light);
@@ -368,6 +380,7 @@ img {
 
 .address-copyright {
   font-size: 14px;
+  color: var(--color-secondary-dark);
 }
 
 .address-icon {
@@ -386,6 +399,7 @@ img {
   background-size: cover;
   background-position: center;
 }
+
 .footer::before,
 .footer::after {
   position: absolute;
@@ -393,6 +407,7 @@ img {
   background-repeat: no-repeat;
   content: "";
 }
+
 .footer::before {
   left: 0;
   width: 180px;
@@ -408,7 +423,37 @@ img {
   right: 0;  
   background-image: url('../images/decor-bread-large.png');
   }
+ .footer-nav {
+  display: flex;
+  gap: 166px;
+ }
+ 
+ .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 211px;
+}
 
+.footer-address-list {
+  width: 211px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.confidencial {
+  width: 211px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 16px;
+}
+
+.footer-cocial-links {
+  display: flex;
+  gap: 22px;
+} 
   /* Modal window */
 
 .backdrop {
