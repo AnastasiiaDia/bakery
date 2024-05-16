@@ -42,7 +42,9 @@
 
 /* BASE  */
 
-* {
+*, 
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -63,7 +65,11 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
+  margin-top: 0; 
+}
+
+a {
+  display: inline-block;
 }
 
 address {
@@ -156,6 +162,7 @@ img {
   flex-grow: 1;
   justify-content: center;
 }
+
 /* HERO */
 
 .hero-section {
@@ -179,6 +186,7 @@ img {
 .hero-title .accent {
   color: var(--color-brand-normal);
 }
+
 /* ADVANTAGES */
 
 .advantages-section {
@@ -199,9 +207,6 @@ img {
   font-weight: 300;
 }
 
-/* .section-title { */
-/* color: var(--color-primary-dark); */
-/* } */
 .section-title .accent {
   color: var(--color-brand-dark);
 }
@@ -215,11 +220,9 @@ img {
 .section-title.centered {
   text-align: center;
 }
+
 /* Traditions section*/
 
-/* .traditions {
-  padding-top: 0;
-} */
 .traditions-section {
   padding-top: 96px;
 }
@@ -255,7 +258,8 @@ img {
 
 .chefs-list {
   display: flex;
-  gap: 30px;
+  gap: 40px 30px;
+  flex-wrap: wrap;
 }
 
 .chefs-item {
@@ -299,6 +303,13 @@ flex-basis: calc((100% - 30px) /2) ;
   font-weight: 600;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
 /* Formats section */
 
 .formats-container {
@@ -383,39 +394,11 @@ flex-shrink: 0;
 border: 0;
 border-radius: 16px;
 }
+
 /* Footer */
-.footer-container {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  display: flex;
-  gap: 166px;
-}
-
-.address-link {
-  color: var(--color-primary-light);
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
-}
-
-.address-link:hover {
-  color: var(--color-brand-normal);
-}
-
-.address-copyright {
-  font-size: 14px;
-  color: var(--color-secondary-dark);
-}
-
-.address-icon {
-  fill: var(--color-primary-light);
-}
-
-.address-icon:hover {
-  fill: var(--color-brand-normal);
-}
 
 .footer {
+  padding: 32px 0;
   position: relative;
   background-image: url("../images/footer-background.png");
   background-color: var(--color-primary-dark);
@@ -447,32 +430,71 @@ border-radius: 16px;
   right: 0;  
   background-image: url('../images/decor-bread-large.png');
   }
- .footer-nav {
+
+.footer-container {
   display: flex;
-  gap: 166px;
- }
+  gap: 20px;
+  }
+
+ .footer-nav,
+ .footer-addres {
+  display: flex;
+  gap: 20px;
+  flex-basis: 50%;
+  }
+
+ .footer-logo,
+ .footer-menu {
+  flex-grow: 1;
+  }
+
+ .footer-menu {
+  display: flex;
  
- .nav-list {
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap; 
+  }
+.address-link {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.address-link:hover {
+  color: var(--color-brand-normal);
+}
+
+.address-copyright {
+  font-size: 14px;
+  color: var(--color-secondary-dark);
+}
+
+.address-icon {
+  fill: var(--color-primary-light);
+}
+
+.address-icon:hover {
+  fill: var(--color-brand-normal);
+}
+
+.address-list,
+.address-confidencial {
+flex-grow: 1;
+}
+
+.address-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  flex-wrap: wrap;
-  width: 211px;
 }
 
-.footer-address-list {
-  width: 211px;
-  display: flex;
-  flex-wrap: wrap;
+.address-confidencial {  
+  display: flex;  
+  flex-direction: column; 
   gap: 16px;
-}
-.confidencial {
-  width: 211px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 16px;
-}
+ }
 
 .footer-cocial-links {
   display: flex;
