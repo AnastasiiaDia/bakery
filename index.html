@@ -19,7 +19,7 @@
   <!-- styles -->
   <link
     rel="stylesheet"
-    href="./css/styles.css"
+    href="./scss/main.css"
   />
   <body>
     <header class="header">
@@ -75,7 +75,7 @@
       </div>
     </header>
     <main>
-      <section class="hero-section section">
+      <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">
             <span class="accent">Сучасна</span> пекарня
@@ -196,6 +196,11 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/walrus-format.jpg"
+                    alt="Walrus rormat"
+                  />
                   <h3
                     class="format-title"
                     lang="en"
@@ -215,6 +220,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/horseshoe-format.jpg"
+                    alt="Horseshoe rormat"
+                  />
                   <h3
                     class="format-title"
                     lang="en"
@@ -234,6 +244,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/handlebar-format.jpg"
+                    alt="Handlebar rormat"
+                  />
                   <h3
                     class="format-title"
                     lang="en"
@@ -296,6 +311,9 @@
                     id="user-name"
                     name="user-name"
                     placeholder="Ім’я"
+                    required
+                    minlength="2"
+                    maxlength="20"
                   />
                 </div>
                 <div class="form-field">
@@ -310,6 +328,7 @@
                     id="user-tel"
                     name="user-tel"
                     placeholder="Телефон"
+                    required
                   />
                 </div>
                 <div class="form-field">
@@ -324,11 +343,13 @@
                     id="user-email"
                     name="user-email"
                     placeholder="Електронна пошта"
+                    required
                   />
                 </div>
                 <button
                   class="button form-button"
                   type="submit"
+                  disabled
                 >
                   Замовити дзвінок
                 </button>
@@ -479,7 +500,7 @@
         </address>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button
           class="modal-btn-close"
@@ -512,6 +533,7 @@
               id="user-name"
               name="user-name"
               placeholder="Ім’я"
+              required
             />
           </div>
           <div class="form-field">
@@ -526,6 +548,7 @@
               id="user-tel"
               name="user-tel"
               placeholder="Телефон"
+              required
             />
           </div>
           <div class="form-field">
@@ -540,11 +563,13 @@
               id="user-email"
               name="user-email"
               placeholder="Електронна пошта"
+              required
             />
           </div>
           <button
             class="button form-button"
             type="submit"
+            disabled
           >
             Замовити дзвінок
           </button>
