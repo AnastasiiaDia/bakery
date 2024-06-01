@@ -1,0 +1,14 @@
+.chefs-section {
+  &__title {
+    position: relative;
+    margin: 0 auto 80px;
+  }
+  &__list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
