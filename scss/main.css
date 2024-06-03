@@ -310,7 +310,6 @@ img {
   padding: 128px;
   background-color: var(--color-primary-light);
   border-radius: 30px;
-  overflow-y: auto;
 }
 .modal__btn-close {
   position: absolute;
@@ -320,12 +319,30 @@ img {
   border: none;
   cursor: pointer;
 }
+.modal__title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.34;
+  width: 634px;
+  margin-bottom: 8px;
+}
+.modal__text {
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 72px;
+}
 .modal__form-field {
   margin-bottom: 32px;
 }
 .modal__button {
   display: block;
   margin: 0 auto 24px;
+}
+.modal__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .advantages-section {
