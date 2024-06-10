@@ -28,6 +28,7 @@
           <nav class="header__nav">
             <a href="./index.html">
               <img
+                class="logo-img"
                 src="./images/logo.svg"
                 alt="Логотип сучасної пекарні"
               />
@@ -69,10 +70,38 @@
           </nav>
           <button
             type="button"
-            class="button modal-btn-open"
+            class="button modal-btn-open header__button"
           >
             Замовити дзвінок
           </button>
+          <button
+            class="header__burger menu-btn-open"
+            type="button"
+          >
+            <svg>
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button
+              class="mobile-menu__btn-close menu-btn-close btn-close"
+              type="button"
+            >
+              <svg
+                width="24"
+                height="24"
+              >
+                <use href="./images/icons.svg#icon-clear"></use>
+              </svg>
+            </button>
+            <svg
+              class="mobile-menu__logo"
+              width="72"
+              height="38"
+            >
+              <use href="./images/icons.svg#icon-logo-mob"></use>
+            </svg>
+          </div>
         </div>
       </div>
     </header>
@@ -82,6 +111,12 @@
           <h1 class="hero-section__title">
             <span class="text-brand">Сучасна</span> пекарня
           </h1>
+          <button
+            type="button"
+            class="button modal-btn-open hero-section__button"
+          >
+            Замовити дзвінок
+          </button>
         </div>
       </section>
       <section class="section advantages-section">
@@ -105,11 +140,11 @@
         <div class="container">
           <div class="traditions-section__container">
             <div class="traditions-section__content">
-              <h2 class="traditions-section__title section__title">
+              <h2 class="section__title traditions-section__title">
                 Новий формат <br />
                 традицій
               </h2>
-              <p>
+              <p class="traditions-section__text">
                 <span class="text-brand text-bold text-uppercase">
                   shop bakery
                 </span>
@@ -128,6 +163,7 @@
             </div>
             <img
               class="traditions-section__image"
+              srcset="./images/baker-man.jpg 1x, ./images/baker-man@2x.jpg 2x"
               src="./images/baker-man.jpg"
               alt="Чоловік пекар дивиться на хліб із посмішкою"
             />
@@ -149,6 +185,10 @@
               <article class="chef-card">
                 <img
                   class="chef-card__image"
+                  srcset="
+                    ./images/nastya-chef.jpg    1x,
+                    ./images/nastya-chef@2x.jpg 2x
+                  "
                   src="./images/nastya-chef.jpg"
                   alt="Nastya chef"
                 />
@@ -170,6 +210,10 @@
               <article class="chef-card">
                 <img
                   class="chef-card__image"
+                  srcset="
+                    ./images/vlad-chef.jpg    1x,
+                    ./images/vlad-chef@2x.jpg 2x
+                  "
                   src="./images/vlad-chef.jpg"
                   alt="Vlad chef"
                 />
@@ -218,6 +262,10 @@
                 <article class="format-card">
                   <img
                     class="format-card__image"
+                    srcset="
+                      ./images/walrus-format.jpg    1x,
+                      ./images/walrus-format@2x.jpg 2x
+                    "
                     src="./images/walrus-format.jpg"
                     alt="Walrus rormat"
                   />
@@ -242,6 +290,10 @@
                 <article class="format-card">
                   <img
                     class="format-card__image"
+                    srcset="
+                      ./images/horseshoe-format.jpg    1x,
+                      ./images/horseshoe-format@2x.jpg 2x
+                    "
                     src="./images/horseshoe-format.jpg"
                     alt="Horseshoe rormat"
                   />
@@ -266,6 +318,10 @@
                 <article class="format-card">
                   <img
                     class="format-card__image"
+                    srcset="
+                      ./images/handlebar-format.jpg    1x,
+                      ./images/handlebar-format@2x.jpg 2x
+                    "
                     src="./images/handlebar-format.jpg"
                     alt="Handlebar rormat"
                   />
@@ -396,6 +452,7 @@
           </div>
         </div>
       </section>
+      -->
     </main>
     <footer class="footer">
       <div class="container footer-container">
@@ -611,6 +668,7 @@
         />
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
