@@ -5,7 +5,7 @@
   width: 100%;
   padding-top: 16px;
 
-  @media screen and (min-width: $bp-desctop) {
+  @media screen and (min-width: $bp-desktop) {
     padding-top: 32px;
   }
 
@@ -25,13 +25,13 @@
     gap: 64px;
     flex-grow: 1;
     justify-content: center;
-    @media screen and (max-width: $bp-desctop) {
+    @media screen and (max-width: $bp-desktop) {
       display: none;
     }
   }
   &__button {
     display: none;
-    @media screen and (min-width: $bp-desctop) {
+    @media screen and (min-width: $bp-desktop) {
       display: block;
     }
   }
@@ -42,7 +42,7 @@
     background-color: transparent;
     fill: var(--color-primary-light);
 
-    @media screen and (min-width: $bp-desctop) {
+    @media screen and (min-width: $bp-desktop) {
       display: none;
     }
   }
