@@ -82,8 +82,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .container {
@@ -325,7 +323,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px 0;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
@@ -342,9 +340,14 @@ img {
   max-width: 880px;
   height: 100%;
   max-height: 880px;
-  padding: 128px;
+  padding: 48px;
   background-color: var(--color-primary-light);
   border-radius: 30px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 128px;
+  }
 }
 .modal__btn-close {
   position: absolute;
@@ -570,22 +573,38 @@ img {
 }
 .footer::before, .footer::after {
   position: absolute;
-  bottom: 0;
   background-repeat: no-repeat;
   content: "";
 }
 .footer::before {
-  left: 0;
-  width: 180px;
-  height: 120px;
-  background-image: url("../images/decor-bread-small.png");
+  background-image: url("../../images/mobile-decor-bread-left.png");
+  width: 92px;
+  height: 196px;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 768px) {
+  .footer::before {
+    background-image: url("../../images/decor-bread-small.png");
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    height: 120px;
+  }
+}
 .footer::after {
-  width: 378px;
-  height: 187px;
+  bottom: -29px;
+  width: 112px;
+  height: 120px;
   right: 0;
-  background-image: url("../images/decor-bread-large.png");
+  background-image: url("../../images/mobile-decor-bread-right.png");
+}
+@media screen and (min-width: 768px) {
+  .footer::after {
+    bottom: 0;
+    width: 378px;
+    height: 187px;
+    background-image: url("../../images/decor-bread-large.png");
+  }
 }
 .footer__container {
   -webkit-box-orient: vertical;
@@ -782,7 +801,8 @@ img {
 }
 .format-card__image {
   position: absolute;
-  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;
@@ -945,6 +965,20 @@ img {
   fill: var(--color-primary-dark);
   top: 16px;
   left: 24px;
+}
+.mobile-menu__container {
+  padding: 86px 24px;
+}
+.mobile-menu__link {
+  color: var(--color-primary-dark);
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.mobile-menu__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .section {

@@ -26,4 +26,19 @@
     top: 16px;
     left: 24px;
   }
+  &__container {
+    padding: 86px 24px;
+  }
+  &__link {
+    color: var(--color-primary-dark);
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
